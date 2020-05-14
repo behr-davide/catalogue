@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: create item_type table
+      author: db
+      changes:
+        - createTable:
+            tableName: item
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: create item table
+      author: db
+      changes:
+        - createTable:
+            tableName: item
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(500)
+              - column:
+                  name: price
+                  type: decimal(12,2)
+              - column:
+                  name: item_type_id
+                  type: int
+        - addForeignKeyConstraint:
+                baseColumnNames: item_type_id
+                baseTableName: item
+                constraintName: item_type_fk
+                referencedColumns: id
+                referencedTableName: item_type
+
