@@ -4,7 +4,7 @@ databaseChangeLog:
       author: db
       changes:
         - createTable:
-            tableName: item
+            tableName: item_type
             columns:
               - column:
                   name: id
@@ -50,6 +50,6 @@ databaseChangeLog:
                 baseColumnNames: item_type_id
                 baseTableName: item
                 constraintName: item_type_fk
-                referencedColumns: id
+                referencedColumnNames: id
                 referencedTableName: item_type
 

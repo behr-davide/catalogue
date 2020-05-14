@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local-dev
+
+---
+
+spring:
+  profiles: local-dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/catalogue
+    username: postgres
+    password: postgres
