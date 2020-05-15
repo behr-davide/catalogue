@@ -24,7 +24,7 @@ class ItemServiceImpl @Autowired constructor(
         return itemRepo.save(item)
     }
 
-    override fun deleteItem(item: Item) {
-        return itemRepo.delete(item)
+    override fun deleteItemById(id: Int) {
+        return itemRepo.deleteById(id)
     }
 }

@@ -10,5 +10,5 @@ interface ItemService {
 
     fun saveItem(item: Item) : Item
 
-    fun deleteItem(item: Item)
+    fun deleteItemById(id: Int)
 }
