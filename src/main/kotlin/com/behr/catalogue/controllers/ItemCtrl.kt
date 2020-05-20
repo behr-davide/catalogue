@@ -10,9 +10,9 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 @RestController
-class CatalogueCtrl @Autowired constructor(
+class ItemCtrl @Autowired constructor(
         private val itemServiceImpl: ItemServiceImpl,
-        private val logger: Logger = LoggerFactory.getLogger(CatalogueCtrl::class.java)
+        private val logger: Logger = LoggerFactory.getLogger(ItemCtrl::class.java)
 ) {
     @GetMapping("/items")
     @ResponseStatus(HttpStatus.OK)

@@ -9,7 +9,7 @@ import java.util.*
 
 @Service
 class ItemServiceImpl @Autowired constructor(
-        val itemRepo: ItemRepo
+        private val itemRepo: ItemRepo
 ) : ItemService {
 
     override fun getAllItems(): List<Item> {
