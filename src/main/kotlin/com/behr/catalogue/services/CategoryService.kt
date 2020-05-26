@@ -7,7 +7,7 @@ interface CategoryService {
 
     fun getCategoryById(id: Int) : Category?
 
-    fun saveCategory(Category: Category) : Category
+    fun saveCategory(category: Category) : Category
 
     fun deleteCategoryById(id: Int)
 }

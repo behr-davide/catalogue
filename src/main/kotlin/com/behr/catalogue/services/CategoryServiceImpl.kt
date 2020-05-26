@@ -4,7 +4,9 @@ import com.behr.catalogue.entities.Category
 import com.behr.catalogue.repositories.CategoryRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
+import org.springframework.stereotype.Service
 
+@Service
 class CategoryServiceImpl @Autowired constructor(
         private val categoryRepo: CategoryRepo
 ) : CategoryService {
